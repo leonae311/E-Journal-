@@ -1,0 +1,1575 @@
+<div class="jw">
+<style>
+.jw{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:#2A2E3A;max-width:1080px;margin:0 auto;padding:24px 14px 60px;line-height:1.5}
+.jw *{box-sizing:border-box}
+.jw-hd{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid #E3E1DC}
+.jw-hd h1{font-family:"Noto Serif TC","PMingLiU",serif;font-size:21px;font-weight:700;margin:0 0 5px;color:#1B1E29}
+.jw-hd p{margin:0;font-size:13px;color:#5B6072}
+/* 圖例 */
+.lgd{display:flex;flex-wrap:wrap;gap:7px 16px;font-size:12px;color:#5B6072;margin-bottom:16px;padding:11px 14px;background:#F5F4F1;border-radius:8px;border:1px solid #E3E1DC;align-items:center}
+.lgd span{display:flex;align-items:center;gap:5px;white-space:nowrap}
+/* Tab 列 */
+.tab-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tab-btn{padding:7px 14px;border:1.5px solid #DDD;border-radius:8px;background:#fff;font-size:13px;font-family:inherit;cursor:pointer;color:#555;transition:all .15s;white-space:nowrap}
+.tab-btn:hover{border-color:var(--tc);color:var(--tc);background:var(--ts)}
+.tab-btn.active{border-color:var(--tc);background:var(--ts);color:var(--tc);font-weight:700}
+.tab-count{display:inline-block;font-size:11px;background:rgba(0,0,0,.08);border-radius:10px;padding:1px 6px;margin-left:4px}
+/* Panel */
+.tab-panel{display:none}.tab-panel.active{display:block}
+/* 搜尋 */
+.panel-ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center}
+.panel-ctrl input{padding:6px 12px;border:1px solid #D8D5CE;border-radius:7px;font-size:13px;font-family:inherit;width:220px;outline:none}
+.panel-ctrl input:focus{border-color:#5A4A8C}
+.ps{font-size:12px;color:#888;margin-left:4px}
+/* 表格 */
+.tbl-wrap{overflow-x:auto}
+table.jt{width:100%;border-collapse:collapse;font-size:13px}
+table.jt thead th{background:#F0EDE8;color:#3A3F52;padding:9px 11px;text-align:left;white-space:nowrap;font-weight:700;border-bottom:2px solid #D8D5CE;cursor:pointer;user-select:none;position:sticky;top:0;z-index:2}
+table.jt thead th:hover{background:#E8E4DC}
+.si{font-size:10px;color:#B0A898;margin-left:3px}
+th.sa .si{color:#5A4A8C}
+table.jt tbody tr{border-bottom:1px solid #EDE9E3;transition:background .1s}
+table.jt tbody tr:hover{background:#F5F3EE}
+table.jt tbody td{padding:8px 11px;vertical-align:top}
+tr.disc-row{opacity:.72;background:#FAF7F7}
+/* 簡介折疊 */
+.cd{min-width:180px;color:#5B6072;font-size:12px;max-height:2.6em;overflow:hidden;transition:max-height .2s}
+tr.open .cd{max-height:200px}
+/* 欄位寬 */
+.cn{min-width:190px}.ct{width:60px}.ch{width:110px}.ce{width:82px}
+/* 連結 */
+a.jl{color:inherit;text-decoration:none;font-weight:600}
+a.jl:hover{text-decoration:underline}
+.jn{font-weight:600}
+/* 停刊 */
+.disc-b{font-size:10px;font-weight:700;padding:1px 5px;border-radius:3px;background:#7B2D2D;color:#fff;margin-left:5px;vertical-align:middle}
+/* 分級 */
+.tb{font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.t1{background:#1B3A6B;color:#fff}.t2{background:#2E5FA3;color:#fff}.t3{background:#6B8CBF;color:#fff}
+/* 館藏 */
+.hb{font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.h-sub{background:#1A6B3C;color:#fff}.h-print{background:#2D6B4A;color:#fff}
+.h-db{background:#1A5276;color:#fff}.h-oa{background:#117A65;color:#fff}
+.h-chk{background:#7D5A00;color:#fff}.h-none{background:#B0B0B0;color:#fff}
+/* 晚X年 */
+.eb{font-size:11px;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.eo{background:#D4EDDA;color:#1A6B3C}.ew{background:#FFF3CD;color:#7D5A00}.ed{background:#F8D7DA;color:#7B2D2D}
+.en{color:#B0B0B0;font-size:11px}
+@media(max-width:580px){.tab-btn{font-size:12px;padding:6px 10px}.cd{display:none}}
+</style>
+
+<div class="jw-hd">
+  <h1>神學核心期刊參考清單</h1>
+  <p>依領域分類整理，涵蓋台神館藏及重要參考期刊。點選期刊名稱可前往該刊頁面；點選列可展開/收合簡介；點選欄位標題可排序。</p>
+</div>
+
+<div class="lgd">
+  <span><span class="tb t1">T1</span>頂尖權威</span>
+  <span><span class="tb t2">T2</span>核心學術</span>
+  <span><span class="tb t3">T3</span>專業實務</span>
+  <span>｜</span>
+  <span><span class="hb h-sub">台神訂閱</span>電子版</span>
+  <span><span class="hb h-print">台神紙本</span></span>
+  <span><span class="hb h-db">ATLAS/GDTL…</span>資料庫</span>
+  <span><span class="hb h-oa">OA</span>開放取用</span>
+  <span><span class="hb h-chk">待確認</span></span>
+  <span><span class="hb h-none">未收錄</span></span>
+  <span><span class="disc-b">已停刊</span></span>
+  <span>｜</span>
+  <span><span class="eb eo">即時更新</span></span>
+  <span><span class="eb ew">延遲N年</span>全文延遲</span>
+  <span><span class="eb ed">至…</span>停更</span>
+</div>
+
+<div class="tab-bar">
+<button class="tab-btn active" data-tab="0" style="--tc:#345C40;--ts:#E6EFE5" onclick="switchTab(0)">舊約研究 <span class="tab-count">10</span></button>
+<button class="tab-btn " data-tab="1" style="--tc:#155164;--ts:#E1EEF2" onclick="switchTab(1)">新約研究 <span class="tab-count">7</span></button>
+<button class="tab-btn " data-tab="2" style="--tc:#594B2A;--ts:#F0ECDF" onclick="switchTab(2)">聖經研究綜合 <span class="tab-count">16</span></button>
+<button class="tab-btn " data-tab="3" style="--tc:#6B4727;--ts:#F1E9DF" onclick="switchTab(3)">歷史神學 <span class="tab-count">18</span></button>
+<button class="tab-btn " data-tab="4" style="--tc:#252E5C;--ts:#E4E7F3" onclick="switchTab(4)">系統神學與倫理 <span class="tab-count">14</span></button>
+<button class="tab-btn " data-tab="5" style="--tc:#353D52;--ts:#ECEDF2" onclick="switchTab(5)">綜合神學 <span class="tab-count">26</span></button>
+<button class="tab-btn " data-tab="6" style="--tc:#823F26;--ts:#F5E6DE" onclick="switchTab(6)">實踐神學 <span class="tab-count">41</span></button>
+<button class="tab-btn " data-tab="7" style="--tc:#623142;--ts:#F2E3E8" onclick="switchTab(7)">靈性諮商與輔導 <span class="tab-count">16</span></button>
+<button class="tab-btn " data-tab="8" style="--tc:#3D4F75;--ts:#E8ECF5" onclick="switchTab(8)">靈修 <span class="tab-count">12</span></button>
+<button class="tab-btn " data-tab="9" style="--tc:#4E4170;--ts:#EDE9F5" onclick="switchTab(9)">教會音樂 <span class="tab-count">17</span></button>
+
+</div>
+
+<div id="panels">
+<div class="tab-panel active" id="panel-0">
+<div class="panel-head" style="border-left:4px solid #345C40;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#345C40">舊約研究</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 10 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="0">
+<thead><tr>
+  <th class="cn" onclick="sortTable(0,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(0,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(0,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(0,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003355?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+for+the+Study+of+the+Old+Testament" target="_blank" rel="noopener">Journal for the Study of the Old Testament</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">自1976年創刊以來，Journal for the Study of the Old Testament已被廣泛認為是提供當代最優秀的、經過同行評審的舊約學術論文的期刊，涵蓋多種批判性研究方法。該期刊開創了許多對舊約文學及其相關研究領域進行詮釋的原創性和創造性方法，並展示了新舊學者的研究成果。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.jstor.org/journal/vetustestamentum" target="_blank" rel="noopener">Vetus Testamentum</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">JSTOR</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Vetus Testamentum涵蓋舊約研究各個面向的權威期刊。其文章內容包括歷史、文學、宗教與神學、文本、翻譯、語言，以及考古學和古代近東研究對舊約的影響。自1951年創刊以來，該期刊一直被公認為舊約學術研究中不可或缺的參考資料。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.degruyterbrill.com/journal/key/zatw/html" target="_blank" rel="noopener">Zeitschrift für die Alttestamentliche Wissenschaft</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Zeitschrift für die Alttestamentliche Wissenschaft分四期出版，每期160頁，並附有增刊，百餘年來一直是舊約及早期猶太教研究領域中領先的國際及跨教派期刊。本期刊開放多種學術問題提出方式，收錄英語、德語及法語高品質的論文。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/1097346316?queryString=Dead%20Sea%20Discoveries&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Dead Sea Discoveries</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Dead Sea Discoveries (DSD是一份國際期刊，致力於研究死海古卷及其文化、歷史和考古背景。該期刊鼓勵創新以及更成熟的方法論和理論研究，從而推動學術進步。 DSD旨在專注於將猶太沙漠發現置於波斯、希臘化和羅馬時期更廣闊的猶太文化背景下進行考察的研究，同時也是持續深入研究古卷作為文本和物質對象的重要平臺。 DSD每年出版三期，其中兩期為開放期刊，另一期為特邀專題期刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Hebrew Bible and Ancient Israel</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Hebrew Bible and Ancient Israel是一份同儕審查的季刊，主要關注聖經文本在古代歷史背景下的研究，同時也關注以色列自身的歷史。每期都有一個專題。期刊的主要語言為英語，但文章也可能以德語和法語發表。期刊的一個具體目標是促進不同學術文化背景的學者在更廣泛的國際背景下，就西元前一千年希伯來聖經和古代以色列的研究展開討論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003356?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+for+the+Study+of+the+Pseudepigrapha" target="_blank" rel="noopener">Journal for the Study of the Pseudepigrapha</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Journal for the Study of the Pseudepigrapha創刊於1987年，旨在為學者們提供一個亟需的同行評審平臺，以討論和評審這一新興學術領域的最新進展。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jhsonline.org/index.php/jhs/issue/archive" target="_blank" rel="noopener">Journal of Hebrew Scriptures</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Hebrew Scriptures（JHS）是一份國際同儕審查的開放取用期刊，創刊於 1996 年，旨在促進對希伯來聖經、古代以色列歷史及相關研究領域的學術研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://academic.sun.ac.za/jnsl/Volumes.htm" target="_blank" rel="noopener">Journal of Northwest Semitic Languages</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Northwest Semitic Languages（JNSL）是南非一份獲得認證的期刊，發表關於古代近東的獨立同行評審研究文章。根據同儕審查政策，所有稿件在發表前均由該研究領域公認的專家學者進行評審。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001476602?autocorrect=y&amp;limiters=None&amp;selectedDb=lsdarjnh&amp;searchTerm=Old+Testament+Essays" target="_blank" rel="noopener">Old Testament Essays</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Old Testament Essays的主要目標是規範和推廣（南）非地區的舊約研究。本刊涵蓋與舊約研究相關的多個領域：語文學/語言學研究、歷史批判研究、考古學研究、社會歷史研究、文學研究、修辭學研究等等。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Scandinavian Journal of the Old Testament</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Scandinavian Journal of the Old Testament於1987年創刊時，人們期望它能成為斯堪的納維亞舊約研究的主要論壇。如今，它的發展已超越了創辦人的預期，正迅速成為國際舊約學術研究的主要刊物之一，同時又保持了其獨特的斯堪的納維亞特色。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-1">
+<div class="panel-head" style="border-left:4px solid #155164;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#155164">新約研究</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 7 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="1">
+<thead><tr>
+  <th class="cn" onclick="sortTable(1,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(1,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(1,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(1,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/home/jnt" target="_blank" rel="noopener">Journal for the Study of the New Testament</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal for the Study of the New Testament是新約研究領域領先的同儕審查學術期刊之一。該期刊每年出版五期，旨在為學者、新約領域的教師、研究生和高年級本科生等讀者群呈現前沿研究成果。期刊涵蓋並推廣新約研究的各個方面，前提是這些研究必須基於充分發展且經過檢驗的方法論。這包括從歷史視角出發的創新研究、運用社會科學和文學理論的研究，以及發展神學、文化和脈絡分析方法的研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.cambridge.org/core/journals/new-testament-studies/all-issues" target="_blank" rel="noopener">New Testament Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">New Testament Studies由新約研究協會（Studiorum Novi Testamenti Societas）主辦，是一份國際同行評審期刊，其撰稿人包括當今世界頂尖的新約學者。本刊發表英文、法文和德文的原創文章和短篇研究，內容涵蓋新約和早期基督教的起源、歷史、背景和神學等廣泛議題。所有稿件均代表了該學科的前沿研究，並發展出多種研究方法。本刊歡迎近年來採用上述任何研究方法的稿件。本刊涵蓋釋經學、歷史學、文學批判、社會學、神學等多種新約研究方法，包括新約詮釋史及其影響的研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.jstor.org/journal/novumtestamentum" target="_blank" rel="noopener">Novum Testamentum</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">JSTOR</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Novum Testamentum是一份國際領先的期刊，致力於新約及其相關領域的研究。其內容涵蓋文本批判、語文學和釋經學研究，以及旨在將早期基督教文本（包括正典和非正典）和神學置於猶太和希臘羅馬歷史、文化、宗教和文學的更廣闊背景下的探討。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.degruyterbrill.com/journal/key/zntw/html?lang=de&amp;srsltid=AfmBOopcwyx7VcKzJX7QG8qr8P7_hSrl2eGrJctJlCTu-4KoSwo2L-6k" target="_blank" rel="noopener">Zeitschrift für die Neutestamentliche Wissenschaft</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">該期刊創刊於1900年，連同其增刊，是國際上新約聖經詮釋領域最負盛名的期刊。期刊每年出版兩期，每期150頁，刊登世界各地傑出學者撰寫的德語、英語和法語原創文章。編輯部秉承高標準，只接受真正推動研究進展的文章，以確保期刊始終保持其公認的高水準。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://brill.com/view/journals/jshj/22/3/jshj.22.issue-3.xml" target="_blank" rel="noopener">Journal for the Study of the Historical Jesus</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-chk">待確認</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Journal for the Study of the Historical Jesus為學術界提供了一個國際平臺，探討耶穌在其西元一世紀背景下的生平。本刊面向所有對此複雜主題過去研究方法和當今研究方向感興趣的讀者。期刊研究耶穌生活的社會、文化和歷史背景，探討重建歷史耶穌的方法論問題，檢視耶穌研究的歷史，並探討耶穌生平在史學接受史和其他媒體中的呈現方式。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003715?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Neotestamentica" target="_blank" rel="noopener">Neotestamentica</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Neotestamentica是南非新約研究協會（NTSSA）的會刊，自1966年創刊以來每年出版，目前每年兩期，共約450頁。該刊致力於展示南非和非洲的學術成果，包括刊登NTSSA年會論文集。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jgrchj.net/" target="_blank" rel="noopener">Journal of Greco-Roman Christianity and Judaism</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Greco-Roman Christianity and Judaism是由麥克馬斯特神學院出版的同行評審 學術期刊。該雜誌發表關於早期基督教和猶太教希臘羅馬世界的文本、語言和文化的研究成果。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-2">
+<div class="panel-head" style="border-left:4px solid #594B2A;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#594B2A">聖經研究綜合</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 16 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="2">
+<thead><tr>
+  <th class="cn" onclick="sortTable(2,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(2,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(2,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(2,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/679417485?queryString=Journal%20of%20Biblical%20Literature&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Biblical Literature</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Biblical Literature（JBL）是一份季刊，致力於促進批判性和學術性的聖經研究。 JBL匯集了最高水準 的專業技術，研究聖經正典、相關文獻和歷史背景， 一個多世紀以來一直是聖經研究領域的旗艦期刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://poj.peeters-leuven.be/content.php?url=journal&amp;journal_code=BIB" target="_blank" rel="noopener">Biblica</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Biblica 由羅馬宗座聖經學院（Pontifical Biblical Institute）自1920年創刊發行，是一份同儕審查的季刊，致力於新舊約聖經及兩約之間文獻的研究，涵蓋經文詮釋、語文學與歷史研究等領域。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003653?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Biblical+Interpretation" target="_blank" rel="noopener">Biblical Interpretation</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲5年</span></td>
+  <td class="cd">Biblical Interpretation期刊發表文章，探討批判性聖經研究的各個方面，將其視為人文或社會科學領域的一部分，並置於複雜的全球背景下進行研究。該期刊為發展和實踐各種當前的詮釋路徑，以及對方法論重點和資源的探討與評估提供了一個平臺。除了作者提交的關於各種主題的論文外，該期刊還歡迎聚焦新興跨學科主題和分析趨勢的特刊提案。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003243?selectedDb=lsdarjnh&amp;db=lsdar" target="_blank" rel="noopener">Catholic Biblical Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Catholic Biblical Quarterly創刊於1939年，是美國天主教聖經協會（CBA）的官方同儕審查期刊。本刊著重於聖經詮釋及相關研究領域，發表涵蓋各種成熟和新興研究方法的學術文章，以及書評和CBA新聞。本刊歡迎採用各種學術方法解讀聖經文本的稿件。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/CBI" target="_blank" rel="noopener">Currents in Biblical Research</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">總結了近期關於特定主題或聖經經卷的研究成果。每篇文章都對其主題進行了全面闡述，但大多數情況下並非面面俱到。文章涵蓋特定的聖經經卷或經卷群、相關的古代文獻、考古學、歷史學，以及新興的研究領域。每篇文章末尾都附有詳盡的參考文獻，為讀者提供關於該主題的重要文章和書籍的基本資訊，並足以支援讀者對該主題進行深入研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/intc" target="_blank" rel="noopener">Interpretation: A Journal of Bible and Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Interpretation: A Journal of Bible and Theology一直為牧師、學者和神學家提供寶貴的學習、講道和教學資源。每期雜誌都圍繞著一個主題或聖經章節，邀請具有相關專業知識的作者進行探討。雜誌包含四到五篇主要文章、「經文與講道之間」專欄文章以及書評，為讀者提供了豐富多樣的學習途徑，幫助他們拓展和深化知識。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/1086504758?queryString=Journal%20for%20the%20Study%20of%20Judaism&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal for the Study of Judaism</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Journal for the Study of Judaism創刊於1970年，是國際領先的學術期刊，致力於探討波斯、希臘化和羅馬時期猶太歷史、文化和文學。該雜誌為聖經學者、古典學者、歷史學家以及第二聖殿時期和早期拉比文學學者提供了一個交流這些領域最新研究成果的平臺。《猶太教研究雜誌》刊登的文章涵蓋多種方法、理論和實證研究，並設有內容豐富的書評專欄；該雜誌偶爾也會出版專題特刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/home/BTB" target="_blank" rel="noopener">Biblical Theology Bulletin: A Journal of Bible and Culture</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Biblical Theology Bulletin創刊於1971年，是一份同儕審查季刊，刊登聖經與神學領域專家撰寫的論文與書評。本刊以早期並持續運用社會科學方法研究聖經文本著稱，為聖經與宗教學者、宗教教育工作者、神職人員及跨文化跨宗派讀者提供批判性聖經研究的洞見。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://scholarlypublishingcollective.org/psup/biblical-research" target="_blank" rel="noopener">Bulletin for Biblical Research</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Bulletin for Biblical Research (BBR)發表經同行評審的舊約/希伯來聖經和新約聖經文章，有時也發表相關文獻的文章，研究方法涵蓋多種歷史和文學流派。該期刊的相當一部分篇幅用於對這些主題的新出版物進行及時的評論。期刊的當前和過往期刊均可在學術出版聯盟（Scholarly Publishing Collective）上線上取得。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://brill.com/view/journals/hbth/hbth-overview.xml?srsltid=AfmBOoqucXPRUWApTByBOv0QvIV_LJWKwk7ULkWrDiw0RH2sEM8iA9F9" target="_blank" rel="noopener">Horizons in Biblical Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-chk">待確認</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Horizo​​​​ns in Biblical Theology是一份國際同行評審期刊，匯集了聖經研究與神學交叉領域的前沿跨學科研究。期刊的主題「視野」（horizo​​ns）旨在喚起人們對聖經研究與神學學科邊界地帶的創造性模糊性的思考；而「聖經神學」（biblical theology）則象徵著一種具有全球意義的批判性、交叉性和教會性的論述。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jbtsonline.org/issues/" target="_blank" rel="noopener">Journal of Biblical and Theological Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Biblical and Theological Studies（JBTS）是一份學術期刊，專注於從跨教派視角探討聖經和神學領域。該期刊的編委會由來自世界各地多所學術機構的學者組成。 JBTS致力於以平易近人的方式呈現高水準的原創學術成果。作為跨宗派期刊，秉持著廣泛的福音派立場。我們接受所有神學學科領域、任何福音派視角的投稿。特別歡迎舊約、新約、聖經神學、教會史、系統神學、實踐神學、哲學神學、哲學和倫理學領域的文章和書評。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Journal of the Evangelical Theological Society</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-print">台神紙本</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">JETS 由福音派神學協會發行，1958年以《Bulletin of the Evangelical Theological Society》創刊，1969年更名為現名，為季刊。宗旨是「透過以聖經為核心的神學各領域寫作與研究，促進保守派聖經學術」，內容涵蓋聖經研究、系統神學與教會歷史等領域，投稿者須認信聖經無誤。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Review of Biblical Literature</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-print">台神紙本</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Review of Biblical Literature（RBL）是SBL出版社的出版物，主要刊登聖經研究及相關領域書籍的評論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.tyndalebulletin.org/issues" target="_blank" rel="noopener">Tyndale Bulletin</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Tyndale Bulletin是一份同儕審查的學術期刊，發表對聖經研究及相關學科做出原創性貢獻的學術文章。它是位於英國劍橋的廷代爾學院（Tyndale House）的官方期刊。廷代爾學院是一家致力於聖經學術研究的研究機構和圖書館。（請注意：我們不再發表倫理學或系統神學/哲學神學/歷史神學的文章。）</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.jjmjs.org/issues.html" target="_blank" rel="noopener">Journal of the Jesus Movement in its Jewish Setting</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of the Jesus Movement in its Jewish Setting（JJMJS）是一份獨立的學術期刊，旨在推動猶太教和基督教早期歷史關鍵時期（西元一世紀至七世紀）的研究，這一時期猶太教和基督教發展成為如今的兩大世界宗教，並在發展過程中相互影響。 主題涵蓋任何直接或間接涉及耶穌運動與其他猶太教形式之間相互關係和互動，以及猶太教和基督教作為兩個相關但獨立的宗教形成過程的議題。期刊的主要研究領域包括：基督教起源、新約研究、早期猶太研究（包括斐洛和約瑟夫斯）、死海古卷、偽經和次經、拉比研究、教父學、古代基督教史、接受史和考古學。期刊鼓勵方法論的多樣性和創新。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/EXT" target="_blank" rel="noopener">Expository Times</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Expository Times是一本創立於 1889 年的國際知名宗教與神學學術期刊，專注於聖經研究、神學發展及牧養事工。該期刊目前由 SAGE Journals 出版，為 AHCI（藝術與人文引文索引）收錄期刊，深受全球神學學者及教牧人員推崇。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-3">
+<div class="panel-head" style="border-left:4px solid #6B4727;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#6B4727">歷史神學</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 18 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="3">
+<thead><tr>
+  <th class="cn" onclick="sortTable(3,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(3,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(3,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(3,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003256?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Church+History&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Church History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">這份季刊採用同行評審制度，發表原創研究論文和書評，涵蓋基督教歷史及其在各個時期和地理的文化背景，包括其非西方表現。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.cambridge.org/core/journals/journal-of-ecclesiastical-history/all-issues" target="_blank" rel="noopener">Journal of Ecclesiastical History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Ecclesiastical History發表原創研究論文、學術評論、綜述文章、筆記和文獻，內容涵蓋基督教歷史的各個方面。該雜誌的研究範圍包括文化史、制度史、思想史、政治史、社會史以及其他任何相關的歷史形式；涵蓋從古代到現代的所有時期；以及世界各地。撰稿人不僅探討具體的研究問題，也積極參與該領域更廣泛的議題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/45416719?queryString=Catholic%20Historical%20Review&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Catholic Historical Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Catholic Historical Review是美國天主教歷史協會的官方刊物，也是英語世界唯一由天主教主辦、致力於普世教會歷史的學術期刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001874223?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Early+Christianity" target="_blank" rel="noopener">Early Christianity</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲5年</span></td>
+  <td class="cd">本刊著重於早期基督教的歷史現象。因此，Early Christianity旨在克服一些阻礙該學科發展的局限性，包括「新約」概念本身。所以，本刊的研究範圍不僅涵蓋基督教的第一個世紀，也包括第二個世紀。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003256?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Church+History&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Journal of Early Christian Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Early Christian Studies 著重於西元100年至700年間晚期古代社會和宗教背景下的基督教研究。該期刊發表傳統教父學研究的精華，同時聚焦在其他教父學期刊鮮少涉及的新興方法論和主題。每期均設有內容豐富的書評欄。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/45416719?queryString=Catholic%20Historical%20Review&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Religious History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Religious History是國際期刊，發表高品質的研究成果，對宗教史領域做出原創性和重要貢獻。該期刊涵蓋所有宗教的歷史及其與各個時期人類經驗的關係；探討宗教及其相關主題，以及宗教史中比較方法和理論的辯論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/50924640?queryString=Vigiliae%20Christianae&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Vigiliae Christianae</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Vigiliae Christianae收錄了關於新約之後早期基督教文學、基督教碑銘學和考古學的文章和短評，內容涵蓋歷史、文化、語言學和文獻學等方面。教會史和教義史與社會史密切相關；拜占庭和中世紀文學則著重探討其與早期基督教時期的延續性。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/60623095?queryString=Anglican%20and%20Episcopal%20History&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Anglican and Episcopal History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Anglican and Episcopal History是一份同行評審期刊，旨在提升討論水準，提供思想交流平臺，並評述對受過教育的聖公會教徒有價值和意義的文章。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/60623095?queryString=Anglican%20and%20Episcopal%20History&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Baptist Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">發表有關浸信會傳統、歷史以及對當今浸信會生活的反思的研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003309?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Fides+et+Historia" target="_blank" rel="noopener">Fides et Historia</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Fides et Historia是一份經過同儕審查的歷史期刊，每年出版兩期。主題廣泛，涵蓋基督教信仰與歷史研究交叉領域的各種議題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jms.uwinnipeg.ca/index.php/jms/issue/archive" target="_blank" rel="noopener">Journal of Mennonite Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Mennonite Studies是加拿大同儕審查的跨學科期刊，探討門諾派社會、文化和宗教的過去與現在。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/694516197?queryString=Journal%20of%20Moravian%20History&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Moravian History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Journal of Moravian History是一份同行評審的英文期刊，發表關於摩拉維亞兄弟會（Unitas Fratrum，又稱赫恩胡特兄弟會）歷史各個領域的學術文章和評論。該期刊也發表與摩拉維亞兄弟會相關的研究筆記和原始資料。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/609157612?queryString=Journal%20of%20Presbyterian%20History&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Presbyterian History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Journal of Presbyterian History旨在增進讀者對宗教歷史（特別是長老會和改革宗歷史）的理解和欣賞；教育讀者瞭解保存這段歷史的重要性；鼓勵讀者參與其中，確保這段歷史成為後世的重要資源；並向長老會教徒和更廣泛的學術界介紹長老會歷史學會的資源和服務。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003432?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Methodist+History" target="_blank" rel="noopener">Methodist History</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至2024</span></td>
+  <td class="cd">Methodist History主要收錄與衛理公會運動及相關宗派歷史、神學傳承相關的同行評審（Peer-reviewed）論文與書評。期刊核心內容包括：起源與神學發展、宗派歷史與全球擴展、社會運動與實踐、人物傳記與文獻。「目前並未出版，最後一期是 Vol. 62, No. 1（2024年）」。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003309?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Fides+et+Historia" target="_blank" rel="noopener">Reformation &amp; Renaissance Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">發表關於十五至十七世紀宗教思想和生活、神學和文化（包括另類方法）各個方面的論文。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.persee.fr/collection/rhef" target="_blank" rel="noopener">Revue d'Histoire Ecclésiastique</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Revue d'Histoire Ecclésiastique是一份學術期刊，由魯汶天主教大學和魯汶天主教大學的教授編輯，每年分兩期出版，共四期。期刊刊載的文章涵蓋基督教的整個歷史。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/47076136?queryString=Sixteenth%20Century%20Journal&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Sixteenth Century Journal</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲5年</span></td>
+  <td class="cd">Sixteenth Century Journal每年發表20至25篇文章和400多篇書評。致力於為讀者提供引人深思的十六世紀研究與探討，涵蓋廣義的十六世紀（即1450年至1648年）。所有文章均以嚴謹的歷史為核心，內容涉及世界各地。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Studies in Church History</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Studies in Church History是一套年度出版的叢書，收錄了教​​會史學會會議上發表的論文和交流文章。每卷都呈現了著名學者和新銳學者圍繞特定主題的重要新作。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-4">
+<div class="panel-head" style="border-left:4px solid #252E5C;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#252E5C">系統神學與倫理</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 14 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="4">
+<thead><tr>
+  <th class="cn" onclick="sortTable(4,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(4,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(4,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(4,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://onlinelibrary.wiley.com/loi/14680025" target="_blank" rel="noopener">Modern Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Modern Theology發表的文章探討神學學科特有的問題以及從神學視角出發的更廣泛議題，包括書評和對文章的回應。本刊秉持普世的編輯方針，並歡迎批判性的書評。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.cambridge.org/core/journals/scottish-journal-of-theology/all-issues" target="_blank" rel="noopener">Scottish Journal of Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Scottish Journal of Theology是一份國際性的系統神學、歷史神學和聖經神學期刊。自1948年創刊以來，它已成為世界領先的神學期刊之一，致力於促進對基督教傳統各個領域的批判性探討。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://onlinelibrary.wiley.com/loi/14682265/year/2025" target="_blank" rel="noopener">The Heythrop Journal</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">The Heythrop Journal秉持著神學和哲學學科之間相互交流互惠的理念，為這兩個領域的學者提供發表文章的平臺，並鼓勵跨學科的評論和辯論。涵蓋所有對神學和哲學研究有所貢獻的學科，特別包括詮釋學、經文釋經學、語言學、歷史學、宗教學、宗教哲學、社會學、心理學、倫理學和教牧神學。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/38325812?queryString=The%20Thomist&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">The Thomist</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">The Thomist是一份同行評審的學術期刊，面向大學、神學院和教會的廣泛國際讀者。秉承托馬斯·阿奎那的傳統和精神，本刊致力於推動對當代哲學和神學問題的原創性和深刻探究。它特別支持對哲學和系統神學問題的持續討論，並鼓勵創造性地運用阿奎那和托馬斯主義傳統中重要作家的思想來推進此類討論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003317?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Gregorianum&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Gregorianum</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Gregorianum是宗座格裡高利大學的季刊，創刊於1920年。它參與了上個世紀羅馬天主教會的所有辯論。發表在最高學院（Collegium Maximum）所授學科領域內具有科學價值且尚未發表的論文。該期刊的稿件可以用六種語言撰寫（法語、英語、義大利語、西班牙語、葡萄牙語和德語）。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001964754?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=International+Journal+of+Philosophy+and+Theology&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">International Journal of Philosophy and Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">提供哲學和神學交叉領域的研究，同時激發對宗教哲學的創意討論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jat-ojs-baylor.tdl.org/jat/issue/view/15" target="_blank" rel="noopener">Journal of Analytic Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">創刊於2013年，是一份開放取用的同儕審查期刊，運用當代分析哲學的方法與概念探討神學與後設神學議題，強調用語清晰與論證嚴謹。討論主題不限於基督教，但目前參與學者以基督教背景居多。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jmt.scholasticahq.com/issues" target="_blank" rel="noopener">Journal of Moral Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Moral Theology是一份開放取用、同儕審查的國際學術期刊，專注於天主教道德神學。本刊發表關於當代議題的原創文章，除了道德神學領域的文章外，也含哲學、經濟學、政治哲學、心理學和當代文化。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://brill.com/view/journals/jrt/jrt-overview.xml" target="_blank" rel="noopener">Journal of Reformed Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-chk">待確認</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Journal of Reformed Theology(JRT)是一份經過同儕審查的國際性系統神學、歷史神學和聖經神學期刊。該期刊致力於研究鮮活的、語境化的神學，為古典和當代神學議題的辯論提供平臺，並更新最新的神學和聖經文獻。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Neue Zeitschrift für Systematische Theologie</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">由 De Gruyter 出版，涵蓋系統神學與宗教哲學完整領域。期刊源於路德宗神學傳統，如今已發展為大公性、國際性的討論平台，探討當代研究提出的重要神學議題，文章可用英文或德文發表，每季出刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Philosophy and Theology</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Philosophy and Theology 由 Andrew Tallon 於 1986 年在馬奎特大學創立，是一份同儕審查期刊，涵蓋哲學與神學兩個學科的共通領域，並非宗教哲學專刊，而是特別著重這兩門古老學科之間的交會地帶。本刊也是卡爾．拉納學會（Karl Rahner Society）的機關期刊，每一卷固定有一期專門探討拉納的思想</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Pro Ecclesia</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Pro Ecclesia是由天主教與福音派神學中心出版的季刊神學期刊。本期刊致力於以當代視角詮釋使徒傳承的唯一信仰及其經典傳統，並透過研究、神學建構和自由交流，促進並彰顯教會的合一。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001466898?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Theology+and+Science&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Theology and Science</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">探討自然科學與神學之間的互動，以及在更廣泛的科學與宗教領域中出現的辯論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003575?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Wesleyan+Theological+Journal&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Wesleyan Theological Journal</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">由衛斯理神學學會於1965年創立，是同儕審查、跨學科學術期刊，每年出版兩期，歡迎神學、教會歷史、聖經研究、哲學與實踐神學等領域投稿，對各基督教神學傳統作者開放。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-5">
+<div class="panel-head" style="border-left:4px solid #353D52;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#353D52">綜合神學</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 26 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="5">
+<thead><tr>
+  <th class="cn" onclick="sortTable(5,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(5,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(5,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(5,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/47922342?queryString=Harvard%20Theological%20Review&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Harvard Theological Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲5年</span></td>
+  <td class="cd">Harvard Theological Review自 1908 年創刊以來， 一直是宗教學者的重要論壇。它持續為所有傳統和時期宗教思想史和哲學的學術理解和詮釋的發展做出貢獻—包括猶太研究、希伯來聖經、新約、基督教、考古學、比較宗教學、神學和倫理學等領域。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://academic.oup.com/jts/issue" target="_blank" rel="noopener">Journal of Theological Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Theological Studies創刊於1899年，涵蓋神學研究、學術和詮釋的各個面向。該期刊也收錄先前從未以印刷形式發表過的古代和現代文本、銘文和文獻。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/CPLI0000584984?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Concilium" target="_blank" rel="noopener">Concilium</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Concilium 刊載了來自五大洲神學家的作品。該刊目前以六種語言出版，堪稱全世界發行量最大的神學期刊。該刊每年出版五期，涵蓋以下主題領域：
+1. 基督教信仰
+2. 倫理與生活方式
+3. 教會、結構、社群、溝通
+4. 宗教、宗教經驗、宗教冷漠、宗教運動
+5. 全球視野、女性主義神學、解放神學</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003369?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+of+Feminist+Studies+in+Religion" target="_blank" rel="noopener">Journal of Feminist Studies in Religion</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Feminist Studies in Religion是宗教研究領域歷史最悠久的跨學科、跨宗教的女性主義學術期刊，旨在發表宗教領域的女性主義學術成果，並為持有不同女性主義視角的男女學者提供討論和對話的平台。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/TSJ" target="_blank" rel="noopener">Theological Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Theological Studies由耶穌會創辦並贊助，是一份天主教學術期刊，旨在透過發表神學領域的研究成果和評論優秀書籍，促進對基督信仰的更深入理解，從而服務於教會及其使命。該期刊自1940年創刊以來持續出版。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/TTJ" target="_blank" rel="noopener">Theology Today</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Theology Today是一本具指標性的同行評審學術季刊，於 1944 年由美國普林斯頓神學院（Princeton Theological Seminary）創立。該期刊為神學界、教牧人員及學術研究者提供深度的思想交流平台，探討當代基督教信仰、倫理與神學實踐。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003390?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+of+Ritual+Studies" target="_blank" rel="noopener">Journal of Ritual Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至2020</span></td>
+  <td class="cd">會音樂1987年創刊，匹茲堡大學宗教研究系發行，是跨學科的儀式研究期刊，涵蓋人類學、歷史學、宗教研究、藝術美學、認知科學等視角，研究對象是全球各種文化、各種宗教（甚至薩滿教、貝南巫術）的儀式現象</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003196?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Anglican+Theological+Review" target="_blank" rel="noopener">Anglican Theological Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Anglican Theological Review致力於以創造性的理性方式與基督教傳統進行對話，並進行涵蓋文學藝術、哲學和科學的跨學科研究。秉承聖公會神學嚴謹求學的精神，我們力求在教會內外促進學術卓越和深入思考。內容以聖公會為中心，但並非完全侷限於聖公會的主題和方法。作者來自不同的傳統和社群。期刊「文章」欄位發表的文章均經過同儕審查。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003270?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Crux" target="_blank" rel="noopener">Crux：A Quarterly Journal of Christian Thought and Opinion</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Crux: A Quarterly Journal of Christian Thought and Opinion 由加拿大維真學院（Regent College）發行，創刊於1962年，是一份面向教會與學術界的季刊，探討基督教神學、聖經詮釋與當代文化之間的交集，內容兼具學術嚴謹與牧養應用。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003322?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=History+of+Religions&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">History of Religions</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">History of Religions一直是研究從史前到現代宗教現象的權威期刊。致力於發表既關注特定傳統、地理和時代，也探討宗教研究中更廣泛的方法論和/或理論問題的學術論文。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://utppublishing.com/toc/tjt/current" target="_blank" rel="noopener">Horizons: The Journal of the College Theology Society</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Horizons: The Journal of the College Theology Society 創刊於1974年，由劍橋大學出版社代表美國大學神學學會發行的半年刊，扎根於天主教「信仰尋求理解」傳統，涵蓋神學與宗教研究廣泛主題，具普世合一視野、跨方法論取徑，深入分析信仰與文化的互動。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003196?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Anglican+Theological+Review" target="_blank" rel="noopener">Irish Theological Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Irish Theological Quarterly是一份同儕審查期刊，專注於系統神學、倫理神學、歷史神學和聖經研究，由梅努斯聖派翠克學院宗座大學創辦。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001532957?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+of+Anglican+Studies&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Journal of Anglican Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Journal of Anglican Studies就聖公會的各個面向展開嚴肅的學術探討，涵蓋歷史、神學、禮拜、倫理、聖經、教會法、美學和教育等領域。聖公會信徒生活在多元文化背景下，他們的信仰如何在具體生活中表達，又如何在世界各地傳播，是這項傳統的核心問題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://moses.creighton.edu/JRS/" target="_blank" rel="noopener">Journal of Religion and Society</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Religion and Society旨在促進對過去和現在不同民族的宗教團體和信仰的研究，尤其側重於美國宗教和西方宗教傳統。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/45381749?queryString=Logos%3A%20A%20Journal%20of%20Catholic%20Thought%20and%20Culture&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Logos: A Journal of Catholic Thought and Culture</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Logos: A Journal of Catholic Thought and Culture自創辦以來，一直是學者發表優秀著作的跨學科交流平台，也為讀者提供了一個了解基督教之美、真理與活力的窗口，展現了基督教如何根植於天主教並受其影響。領域包含藝術、攝影、建築和音樂；神學、哲學、歷史和文學；自然科學和社會科學、公共政策和專業領域。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003599?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Louvain+Studies&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Louvain Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Louvain Studies是比利時魯汶大學神學與宗教研究學院出版的英文季刊（每卷約400頁）。該刊秉承魯汶大學的歷史批判傳統，致力於促進對當代神學、倫理和牧靈議題的國際對話與反思。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000006004?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Modern+Believing" target="_blank" rel="noopener">Modern Believing</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Modern Believing致力於探討具建設性、開放且具挑戰性的自由主義神學與宗教研究。該期刊內容涵蓋現代神學、倫理議題、跨學科研究，並深入探討包括創傷神學、女性神學現代主義及教會種族主義解構等當代專題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://onlinelibrary.wiley.com/loi/17480922" target="_blank" rel="noopener">Religious Studies Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Religious Studies Review季刊出版，是宗教研究及相關學科領域首屈一指的評論期刊。 RSR每年以短篇評論和長篇評論文章的形式評論超過1000種出版物。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://learn.elca.org/jle/issues/" target="_blank" rel="noopener">Social Compass</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Social Compass是一份經過嚴格同行評審的國際期刊，發表關於宗教社會學的原創研究和評論文章。本刊旨在反映世界各國宗教社會學家所進行的廣泛研究。每期期刊的一部分是圍繞特定主題的特邀文章；另一部分則不設主題，接受任何與當代社會宗教相關的議題的文章。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003270?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Crux" target="_blank" rel="noopener">The Christian Century</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-print">台神紙本</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">The Christian Century是一份總部位於伊利諾州芝加哥的基督教雜誌。它被認為是美國主流新教的旗艦雜誌，每月報導宗教新聞；評論神學、道德和文化問題；並評論書籍、電影和音樂。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/home/TJX" target="_blank" rel="noopener">Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Theology期刊是所有希望拓展當代神學研究知識的人的理想選擇。它收錄了來自基督教傳統各領域頂尖學者和新晉作者的同行評審論文。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://utppublishing.com/toc/tjt/current" target="_blank" rel="noopener">Toronto Journal of Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Toronto Journal of Theology是一份進步的、雙盲評審的分析和學術期刊，反映了不同的基督教傳統，並探索了神學研究的全部範圍。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003565?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Union+Seminary+Quarterly+Review&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Union Seminary Quarterly Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至2016</span></td>
+  <td class="cd">Union Seminary Quarterly Review（USQR）創辦於1939年，旨在為富有啟發性且關注社會的宗教思想提供一個平臺，後來成為萊因霍爾德·尼布爾和保羅·蒂利希等作家和神學家的重要著作庫。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://ugp.rug.nl/ijh" target="_blank" rel="noopener">Word &amp; World</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Word &amp; World是由美國路德神學院（Luther Seminary）出版的基督教神學季刊。該期刊旨在探討「上帝的話語」與「當代世界」的連結，並致力於將深奧的神學研究應用於實踐，為基督徒與教牧人員提供具時代意義的牧養與事工指引。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://ir.taitheo.org.tw/handle/987654321/68" target="_blank" rel="noopener">台灣神學論刊 (Taiwan Journal of Theology)</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">台神數位典藏</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">《台灣神學論刊》是由台神學校財團法人台灣神學研究學院發行的專業學術期刊。內容聚焦於基督教神學研究，深度結合台灣與亞洲本土的文化處境，涵蓋聖經詮釋、系統神學、教會歷史及實踐神學等領域，為華人神學界重要的學術出版物。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.airitilibrary.com/Publication/Information?publicationID=P20170411002&amp;type=%E6%9C%9F%E5%88%8A&amp;tabName=2&amp;issueYear=2026&amp;issueID=&amp;publisherID=U20170407001&amp;isPrePrint=&amp;SessionID=" target="_blank" rel="noopener">道風：基督教文化評論</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">華藝</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">《道風：基督教文化評論》是由「漢語基督教文化研究所」發行的重量級中文學術期刊。其核心內容旨在推動跨學科的基督宗教研究，深度探討基督教神學、哲學、歷史與文化，並特別聚焦於「漢語神學」的發展與本土對話。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-6">
+<div class="panel-head" style="border-left:4px solid #823F26;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#823F26">實踐神學</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 41 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="6">
+<thead><tr>
+  <th class="cn" onclick="sortTable(6,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(6,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(6,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(6,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLAn3851469?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=International+Bulletin+of+Mission+Research" target="_blank" rel="noopener">International Bulletin of Mission Research</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">International Bulletin of Mission Research(IBMR)創刊於 1950 年，在宣教研究和世界基督教領域擁有最高的發行量。IBMR致力於透過檢視不同的地理、政治、教會和社會背景來拓展研究領域。 IBMR致力於運用一手資料，包括檔案、口述歷史和民族誌。 IBMR秉持客觀、分析和非黨派的編輯立場。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/MIS" target="_blank" rel="noopener">Missiology: An International Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Missiology是美國宣教學會的季刊。該刊為宣教學家及其他相關領域人士交流想法和研究成果提供了一個平臺。多元學科交叉－歷史、神學、人類學、傳播理論、宗教相遇、普世合一、方法論跨教派合作。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://onlinelibrary.wiley.com/loi/14679795" target="_blank" rel="noopener">Journal of Religious Ethics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Religious Ethics(JRE)創刊於1973年，旨在「協助塑造和引領宗教倫理領域的前沿學術研究」。本刊尋求發表三個領域的文章：比較宗教倫理學研究、基礎概念和方法論問題的探討，以及對重要人物和文本的歷史研究</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://homiletic.net/index.php/homiletic/issue/archive" target="_blank" rel="noopener">Homiletic</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Homiletic是一本專注於「講道學」與「宗教傳播」領域的學術期刊。該期刊由學者與專家組成同行評審（Peer-reviewed）機制，並提供免費的開放取用，旨在為神學、講道藝術及宗教交流提供深入研究的平台。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://onlinelibrary.wiley.com/loi/17586631/year/2024" target="_blank" rel="noopener">International Review of Mission</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">International Review of Mission是宣教學領域首屈一指的期刊，作者和讀者來自世界各地，涵蓋不同的基督教背景、宣教運動和學術機構。該刊創刊於1912年，由世界基督教協會出版，專注於普世宣教神學與實踐。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/233824913?queryString=Journal%20of%20World%20Christianity&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of World Christianity</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Journal of World Christianity特別關注對基督教在歷史或當今存在地區的本土形式的比較研究，以及基督教在宗教間對話中的地位、基督教與其他信仰者互動史，以及因教派、教會、地理或地緣政治分歧而分隔的基督教團體之間的互動。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://brill.com/view/journals/mist/mist-overview.xml?srsltid=AfmBOorBQNF_dGD6JoUfG7D42pG2tXPpMU1jXKBeORb8ZH7yxQrgmOaY" target="_blank" rel="noopener">Mission Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-chk">待確認</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Mission Studies旨在使國際宣教研究協會能夠擴大其服務範圍，使其成為一個從國際、跨教派和跨學科視角，對基督教見證及其在世界的影響，以及相關的跨文化神學領域進行學術研究的論壇。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.euppublishing.com/loi/swc" target="_blank" rel="noopener">Studies in World Christianity</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">該期刊旨在促進對基督教作為世界宗教的各個方面進行創造性思考和活躍的學術交流。期刊收錄的文章涵蓋歷史學、神學和社會科學等多個觀點。雖然該期刊主要關注非洲、亞洲、拉丁美洲、大洋洲和東歐基督教生活和思想的豐富多樣性，但其文章也探討了基督教在世界大多數地區與西歐或北美之間雙向影響的管道。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/56717329?queryString=Journal%20of%20the%20Society%20of%20Christian%20Ethics&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of the Society of Christian Ethics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of the Society of Christian Ethics(JSCE)由喬治城大學出版社出版，每年兩期。 JSCE的內容包括學術論文、書評和廣告。 JSCE的前身是《基督教倫理學會年鑑》。其內容通常與學會的活動和年會相關，但它並非年會論文集。 JSCE也刊登猶太倫理學會和穆斯林倫理研究學會年會的論文。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.tandfonline.com/journals/ypot20" target="_blank" rel="noopener">Political Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Political Theology 由 Taylor &amp; Francis 出版，是一份跨學科的學術期刊，宗旨是促進政治神學領域的學術研究，探討宗教與政治思想及實踐之間的關聯。內容橫跨神學、宗教研究、政治學、哲學、倫理學與文化研究等領域，反映宗教與神學介入公共與政治生活的多元樣貌。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/SCE" target="_blank" rel="noopener">Studies in Christian Ethics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Studies in Christian Ethics是 一份英文同儕審查期刊，專門探討基督教倫理道德神學領域的相關議題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://ugp.rug.nl/ijh" target="_blank" rel="noopener">International Journal of Homiletics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">International Journal of Homiletic( IJH)是一本專注於「講道學」與「實踐神學」的國際同行評審學術期刊。該期刊匯集了全球講道學者的研究，致力於探討講道方法論的發展、學術研究成果的交流，並促進神學反思。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/intc" target="_blank" rel="noopener">Interpretation</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Interpretation: A Journal of Bible and Theology 創刊於1947年，由美國維吉尼亞州里奇蒙的聯合長老會神學院發行，是一份歷史悠久的季刊，提供對聖經文本的深入詮釋，並探討這些文本如何與當代神學、教會生活及社會議題連結，長期作為牧者、學者與神學生講道與教學的重要資源。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://churchmissionsociety.org/anvil-journal-theology-and-mission/archive/" target="_blank" rel="noopener">Anvil: A Journal of Theology and Mission</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Anvil: A Journal of Theology and Mission 創刊於1984年，是一份聖公會福音派神學與宣教期刊，2016年起由差會 Church Mission Society（CMS）發行，探討宣教實踐、處境神學與當代教會議題（如城市宣教、藝術與宣教、宣教中的永續發展等主題）。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003302?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Evangelical+Missions+Quarterly&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Evangelical Missions Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">該季刊有兩目的：向整個教會提供其在世界各地工作中獲得的各種見解，並讓各個宣教機構在思想和實際宣教策略方面相互激勵和瞭解。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://brill.com/view/journals/exch/exch-overview.xml?srsltid=AfmBOoqoRSDswLhoNvisiM-4BTnDdK04rbZMLshV1ecdsafLvL2-7CJ9" target="_blank" rel="noopener">Exchange</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-chk">待確認</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Exchange是一份同行評審期刊，旨在為全球基督教動態的多學科研究提供交流平臺。該期刊聚焦於當代基督教在文化、社會經濟、政治和宗教環境中的交流與轉型。儘管期刊的重點是當代基督教，但也歡迎探討當代基督教縱向發展或研究當代基督教與歷史聯繫的文章。期刊的研究範圍涵蓋跨文化神學、跨宗教對話、宣教學和普世合一等領域的發展和新方向。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="http://ojs.globalmissiology.org/index.php/english/issue/archive" target="_blank" rel="noopener">Global Missiology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Global Missiology是一份開放獲取的電子學術期刊，涵蓋了跨文化研究、全球基督教發展、宣教策略及當代挑戰等核心領域。其主要內容與學術範疇包含以下幾個重點：跨文化與處境化研究、當代全球性宣教挑戰、宣教學理論與歷史反思、實務事工探討。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001916719?autocorrect=y&amp;db=lsdar&amp;selectedDb=lsdarjnh" target="_blank" rel="noopener">Great Commission Research Journal</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Great Commission Research Journal是一份學術性、同儕審查的出版物，發表旨在幫助人們跟隨耶穌基督的事工研究。這些研究融合了神學、宣教學、心理學、社會學、人類學和歷史等多個學科。這本期刊專注於與大使命（太28:19-20）相關的教會研究，即耶穌呼召人們幫助他人跟隨祂。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.ijfm.org/" target="_blank" rel="noopener">International Journal of Frontier Missiology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">International Journal of Frontier Missiology（IJFM）由國際學生領袖前沿宣教聯盟出版。力求： 促進資深和初級傳教士領導人之間的代際對話；在邊疆宣教學發展中培養國際思想友誼；強調需要維護、更新和創建任務機構，作為前線任務的載體；鼓勵多維度和跨學科研究；培養精神虔誠和智力發展；提倡「人人享有教會」。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Journal of African Christian Thought</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">JACT 是迦納阿克羅菲—克里斯塔勒神學、宣教與文化學院的機關期刊，1998年由迦納神學家 Kwame Bediako 與 Gillian Bediako 創立，每年六月、十二月出版兩期，聚焦非洲基督教思想、非洲處境神學與跨文化宣教研究，收錄於 ATLA 的 Religion Index One 索引。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Journal of Missional Practice</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Missional Practice致力於收集上帝在本地脈絡中作為的故事，並培育學習社群，透過這些故事進行深入的神學聆聽。我們毫不掩飾地以故事為驅動，並致力於神學反思。上帝的作為和作為是我們一切的出發點和焦點。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Mission Focus</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Mission Focus（後期以 Annual Review 形式發行）是一本探討重洗派與門諾會（Mennonite）宣教學的學術期刊。該刊旨在促進全球信徒對教會宣教使命的理解，內容涵蓋跨文化宣教研究、神學反思以及宣教機構的實踐經驗。這本由神學院及差會贊助的期刊，主要提供學者、宣教士與教會領袖一個對話交流的平臺；其核心重點包含：宣教神學探討、實務經驗反思、時代議題對話</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://missionalia.journals.ac.za/pub" target="_blank" rel="noopener">Missionalia</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Missionalia是南部非洲宣教學會（SAMS）的會刊，每年出版三期（四月、八月和十一月）。刊登於本刊的文章和書評不一定代表編輯部、編輯委員會或南部非洲宣教學會的觀點。所有投稿均由評審小組進行評估，最終是否發表取決於評審報告。作為南部非洲宣教學會認可的期刊，《宣教刊》發表的研究文章旨在為宣教學領域貢獻新的知識。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><span class="jn">Swedish Missiological Themes</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Swedish Missiological Themes聚焦於全球基督宗教宣教、信仰與文化對話，以及宣教工作的歷史、神學與實踐層面。本刊通常從斯堪地那維亞、普世教會合一（大公教會）及後殖民的角度出發。其核心主題包括處境神學、政教關係、皈依（信仰轉變），以及瑞典宣教工作的歷史（特別是在非洲與亞洲地區）。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003560?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Transformation&amp;skipResultsFetch=true&amp;sqId=sq%3A66a38621-278e-461c-984a-361e645532da" target="_blank" rel="noopener">Transformation</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Transformation是一份同儕審查的季刊，由牛津宣教研究中心出版。它為學者和實踐者提供了一個國際論壇，共同探討宣教研究，特別關注發展中國家。本刊歡迎以下領域的原創論文：宣教與神學；聖經與倫理；宗教與文化；信仰發展。本刊物對當今世界一系列議題進行深入的分析和反思，包括經濟、發展、暴力、家庭生活和其他倫理議題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003718?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Christian+Bioethics" target="_blank" rel="noopener">Christian Bioethics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Christian Bioethics是一份非普世主義、跨教派的期刊，旨在探討基督教各教派對人類生命、性、苦難、疾病和死亡的意義，以及它們在醫學和醫療保健領域的內涵。本刊力求不掩蓋基督教各派之間的差異，而是強調那些區分並賦予道德實質的、內涵豐富的道德承諾。本刊的跨教派性體現在編輯團隊的參與以及不同基督教視角的投稿。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://learn.elca.org/jle/issues/" target="_blank" rel="noopener">Journal of Lutheran Ethics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Lutheran Ethics(JLE)是一份免費的雙月刊教會線上出版物，秉承路德宗的傳統，運用歷史、神學和倫理傳統、聖經詮釋和社會科學的資源，從神學的角度探討社會問題。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://jmt.scholasticahq.com/issues" target="_blank" rel="noopener">Journal of Peace and Justice Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Peace and Justice Studies發表來自哲學、神學、社會與政治理論以及公共政策等多個學科的同行評審學術論文，探討和平與正義的實質議題。期刊既關注這些問題背後的概念性探討，也關注旨在解決這些問題的實證研究。此外，期刊還收錄短文、評論文章、書評和評論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://learn.elca.org/jle/issues/" target="_blank" rel="noopener">Religion and Human Rights</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Religion and Human Rights為探討至關​​重要且具有全球影響力的議題提供了一個獨特的學術論壇。該期刊關注宗教或信仰與促進和保護人權的體系（包括國際、區域和國家層面）之間的互動、衝突與和解。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.hprweb.com/" target="_blank" rel="noopener">Homiletic and Pastoral Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Homiletic and Pastoral Review(HPR)是一本創立於 1900 年的美國天主教教牧月刊。該期刊宗旨為提供神職人員與信徒關於耶穌基督及其教會真理的教導，協助牧者面對現代挑戰，是美國歷史最悠久、最具代表性的教牧刊物之一。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003493?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Review" target="_blank" rel="noopener">Homily Service</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Homily Service專為天主教與基督教神職人員、修生及研經團體設計的季刊。該期刊提供以教會「三年週年經課」（Lectionary）為基礎的豐富資源，旨在幫助講道者將聖經內容與現代生活巧妙結合。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003351?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;searchTerm=Journal+for+Preachers&amp;selectedDb=lsdarjnh" target="_blank" rel="noopener">Journal for Preachers</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal for Preachers是一本專為全球教牧人員與講員打造的季刊，提供豐富的釋經學與神學資源。每期內容緊扣特定節期（如將臨期、大齋期、復活節與聖靈降臨節），旨在幫助講員將嚴謹的聖經研究與當代文化分析相結合，預備出扎實且觸動人心的講章。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/993449378?queryString=Journal%20of%20the%20Evangelical%20Homiletics%20Society&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of the Evangelical Homiletics Society</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of the Evangelical Homiletics Society(JEHS)是由福音派講道學協會發行的專業學術期刊，專注於聖經講道與教導的探討。該刊內容涵蓋講道學術論文、書評以及講章，是實踐神學領域的重要資源。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLAn3841719?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;searchTerm=Lectionary+Homiletics&amp;selectedDb=lsdarjnh" target="_blank" rel="noopener">Lectionary Homiletics</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至2015</span></td>
+  <td class="cd">Lectionary Homiletics是一本專為教牧人員與講員設計的實用講道期刊。該期刊由 Luther Seminary 出版（紙本與全文檔案收錄範圍為 1989 至 2016 年），致力於協助牧者準備各主日的聖經講章。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLAn3841719?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;searchTerm=Lectionary+Homiletics&amp;selectedDb=lsdarjnh" target="_blank" rel="noopener">Preach</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">專為牧者、講道者及教會領袖設計的基督教季刊，由英國慈善機構「帶領敬拜與講道信託基金」（Leaders of Worship and Preachers Trust, LWPT）發行。內容旨在透過聖經基礎與跨宗派視野，幫助讀者提升講道技巧、深化神學素養。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.jstor.org/site/olivetnazareneuniversity/church-of-the-nazarene-publications/preachersmagazine-37758990/?so=item_title_str_asc" target="_blank" rel="noopener">Preacher's Magazine</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">JSTOR</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至1999</span></td>
+  <td class="cd">Preacher's Magazine是專為傳道人與神學生設計的教牧與神學期刊，致力於提供聖經詮釋、講道學原則與牧養實務。其內容旨在透過實用的工具與屬靈指引，幫助牧者提升講道技巧，並在牧養旅程中持續成長。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003493?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Review" target="_blank" rel="noopener">Preacher's Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Preacher's Quarterly專為基督教牧者、傳道人與神學生設計的神學與實踐期刊。該刊旨在幫助教牧人員面對現代宣教與牧養挑戰，提供基於聖經的實用教導。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/intc" target="_blank" rel="noopener">Preaching</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Preaching 由 Michael Duduit 於1985年創立，是美國最具代表性的講道學季刊之一，2017年起由安德森大學發行，內容包含講道實務技巧、知名講員專訪與神學反思，長期服務全美牧者與教會領袖。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.hprweb.com/" target="_blank" rel="noopener">Proclamation</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">提供符合聖經的福音信息，專為探索基督教教義、信仰反思與相關神學辯論而設。內容範疇：收錄專題文章、聖經書卷註釋、讀者投書以及靈修與信仰實踐的討論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003493?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Review" target="_blank" rel="noopener">Review &amp; Expositor</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">創刊於 1904 年，是一本聚焦於神學與聖經研究的浸信會學術期刊。該期刊致力於提供教會使命、聖經釋經與當代神學議題的自由開放探討，深受全球神學研究者與教牧人員的推崇。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003739?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;searchTerm=The+Living+Pulpit&amp;selectedDb=lsdarjnh" target="_blank" rel="noopener">The Living Pulpit</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至2007</span></td>
+  <td class="cd">The Living Pulpit是一本專注於基督教講道與神學宣講的跨宗派季刊。不同於提供實務技巧的工具書，該期刊深入探討「講道的意義與影響」，旨在幫助傳道人、神學生及信徒深化信仰實踐與社會對話。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-7">
+<div class="panel-head" style="border-left:4px solid #623142;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#623142">靈性諮商與輔導</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 16 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="7">
+<thead><tr>
+  <th class="cn" onclick="sortTable(7,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(7,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(7,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(7,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/1787711?queryString=ti%3AJournal%20of%20Psychology%20and%20Theology&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Psychology and Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲5年</span></td>
+  <td class="cd">Journal of Psychology and Theology創刊於 1973 年，是一本專注於探討心理學與基督教神學相互關係的學術期刊。該期刊旨在促進兩個學科間的對話，並將其應用於心理健康諮詢、教育、領導力及教牧關懷等專業領域。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/PCC" target="_blank" rel="noopener">Journal of Pastoral Care and Counseling</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Pastoral Care and Counseling創刊於 1947 年，是靈性關懷、臨床牧靈教育（CPE）與心理諮商領域的權威學術期刊。它提供了一個學者與實務工作者交流的平台，致力於推動牧靈與屬靈輔導的理論與專業實踐。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/8404774?queryString=Journal%20of%20Psychology%20and%20Christianity&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Psychology and Christianity</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲3年</span></td>
+  <td class="cd">Journal of Psychology and Christianity(JPC)創刊於 1982 年，為「基督教心理學研究協會」（CAPS）的官方同行評審學術期刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003687?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+of+Religion+and+Health" target="_blank" rel="noopener">Journal of Religion and Health</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Journal of Religion and Health創刊於1961年，是一本探討心理學、宗教/靈性與身心健康關聯的跨學科國際學術期刊。該期刊致力於結合神學與當代醫療心理學研究，探討信仰與靈性在精神及生理健康中的角色。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://journals.sagepub.com/loi/PCC" target="_blank" rel="noopener">Journal of Spiritual Care</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Spiritual Care致力於靈性關懷領域的跨學科研究和跨專業交流。本刊提供有關新研究理念、靈性關懷實踐及其對衛生專業培訓和牧靈關懷的意義的資訊。也刊登經驗報告和實務案例。同時定期報導德國及國際上關於靈性關懷在醫學、護理、社會工作、心理治療、牧靈關懷及其他相關領域的討論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001772032?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Psychology+of+Religion+and+Spirituality" target="_blank" rel="noopener">Psychology of Religion and Spirituality</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Psychology of Religion and Spirituality發表與宗教和靈性的心理學方面相關的同行評審原創文章。該期刊發表採用實驗和相關性研究方法、質性分析以及文獻批判性綜述的文章。我們也考慮發表評估與培訓、職業發展和實踐相關的臨床問題的論文。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/BJG?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=pbhjnh&amp;searchTerm=British+Journal+of+Guidance" target="_blank" rel="noopener">British Journal of Guidance &amp; Counselling</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">Psy &amp; Beh</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">British Journal of Guidance &amp; Counselling創刊於1973年，是一本具指標性的國際學術期刊。該期刊的核心範疇涵蓋心理諮商、心理治療與職涯發展。它致力於發表具前瞻性、創新性及最高科學標準的實證與理論研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003687?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+of+Religion+and+Health" target="_blank" rel="noopener">Christian Counseling Today</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Christian Counseling Toda由美國基督教輔導協會（AACC）發行的指標性季刊。內容完美結合心理學與聖經真理，提供具學術深度又實用的專業資訊，是專為教牧人員、專業心理諮商師及助人者打造的核心資源。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001445283?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Mental+Health" target="_blank" rel="noopener">Counseling and Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Counseling and Theology跨領域期刊致力於探討心理學、諮商輔導與基督教神學的結合。其核心內容聚焦於將信仰原則應用於心理治療、教牧關顧以及靈命塑造，提供臨床實務與學術理論對話的平台。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000022973?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Counseling+and+Values" target="_blank" rel="noopener">Counseling and Values</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Counseling and Values是美國諮商學會 (ACA) 旗下分支機構的官方學術期刊，由 Brill 出版社發行。該期刊專注於諮商過程中的倫理、宗教與靈性議題，致力於探討多元文化背景下價值觀的整合與應用。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLAn3772794?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Health+and+Social+Care+Chaplaincy" target="_blank" rel="noopener">Health and Social Care Chaplaincy</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Health and Social Care Chaplaincy是一本多學科的國際同行評審期刊，專注於探討各醫療與社區環境中的精神照護。該刊物促進了國際間的跨領域合作，並涵蓋當代社會醫療保健的心理、社會、文化與倫理層面。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003629?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=The+Journal+of+Biblical+Counseling" target="_blank" rel="noopener">Journal of Biblical Counseling</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Biblical Counseling是由基督教輔導與教育協會（CCEF）發行的實踐神學季刊。旨在將聖經真理連結於日常生活與協談中，提供清晰、不生澀的資源，幫助牧者、專業輔導員與平信徒發展有效的聖經輔導實踐。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/SCP?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=pdhjnh&amp;searchTerm=Spirituality+in+Clinical+Practice" target="_blank" rel="noopener">Journal of Christian Nursing</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Christian Nursing是一本由「基督徒護理人員團契」（Nurses Christian Fellowship）發行的專業同儕審查季刊。該期刊旨在協助護理人員與學生從基督教聖經視角出發，將信仰與護理專業相結合。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.tandfonline.com/toc/ypat20/current" target="_blank" rel="noopener">Journal of Pastoral Theology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Pastoral Theology是由「牧靈神學學會」（Society for Pastoral Theology）發起並創辦的專業學術期刊。該期刊專注於牧靈神學（Pastoral Theology）領域，致力於探討神學理論與實踐。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001445283?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Mental+Health" target="_blank" rel="noopener">Mental Health, Religion &amp; Culture</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Mental Health, Religion &amp; Culture是一本探討精神健康、宗教與文化交叉領域的國際學術期刊。期刊致力於發表基於實證的研究，探討宗教信仰及文化背景如何影響個體的心理健康、疾病診斷及臨床治療。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003676?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Pastoral+Psychology" target="_blank" rel="noopener">Pastoral Psychology</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Pastoral Psychology是一本專注於宗教、靈性與心理健康交叉領域的國際同行評審學術期刊。該刊創立於1950年，旨在探討如何在臨床實踐、諮商與教牧關懷中整合宗教信仰，促進現代人的心理福祉。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-8">
+<div class="panel-head" style="border-left:4px solid #3D4F75;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#3D4F75">靈修</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 12 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="8">
+<thead><tr>
+  <th class="cn" onclick="sortTable(8,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(8,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(8,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(8,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/47005498?queryString=Spiritus%3A%20A%20Journal%20of%20Christian%20Spirituality&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Spiritus: A Journal of Christian Spirituality</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Spiritus: A Journal of Christian Spirituality是一份跨學科、跨教派的期刊，致力於基督教靈修的學術研究。期刊透過富有洞見的文章、評論、詩歌、圖片以及重要文獻的翻譯，力求吸引學者、牧師、從業人員以及從事助人職業的人士。它是基督教靈修研究學會（SSCS）的官方期刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://poj.peeters-leuven.be/content.php?url=journal&amp;journal_code=SIS" target="_blank" rel="noopener">Studies in Spirituality</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Studies in Spirituality是奈梅亨泰特斯·布蘭茲瑪研究所（Titus Brandsma Institute）的期刊，旨在發表關於靈性和神秘主義的學術性專業文章，從而推動靈性作為一門科學的發展。鑑於靈性研究需要多學科交叉的方法，本刊涵蓋了廣泛的主題：關於靈性和神秘主義的理論問題；靈性轉化的基本面向和現象；不同靈性傳統中的重要思潮、時期和人物。本刊主要關注猶太教-基督教傳統，但並非僅限於此。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/47005498?queryString=Spiritus%3A%20A%20Journal%20of%20Christian%20Spirituality&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Spiritual Formation and Soul Care</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Spiritual Formation and Soul Care是一份同儕審查期刊，每年出版兩期。其宗旨是透過以聖經詮釋、系統神學、基督教靈性史、哲學分析、心理學理論/研究、靈性神學和基督教經驗為基礎的學術出版物，推進基督教靈性塑造和靈魂關懷的理論與實踐的探討，以服務於教會的教育事工、基督教教育和其他準教會機構。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://contemplativejournal.org/" target="_blank" rel="noopener">Desert Call</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Desert Call聚焦於基督教神秘主義、修道生活和跨宗教對話。它獨特地融合了沙漠教父教母的古老智慧與對自然、藝術和充滿活力的文化的熱情欣賞。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://contemplativejournal.org/#/" target="_blank" rel="noopener">Journal of Contemplative Studies</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Contemplative Studies是由維吉尼亞大學沉思科學中心出版的同行評審開放取用期刊。該期刊發表與沉思實踐相關的原創研究和學術論文，重點關注以人文主義為核心的人文研究和跨學科學術研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/CPLI0000518073?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Review+for+Religious" target="_blank" rel="noopener">Merton Annual</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Merton Annual是一份同行評審期刊，發表關於托馬斯·默頓及其生平與著作相關重要議題的文章。其宗旨在提升默頓作為作家和修士的聲譽，繼續發展其思想以適應時代，並為重要的默頓相關學術研究提供定期發表的平台。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/60628557?queryString=Mystics%20Quarterly&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Mystics Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ed">至2009</span></td>
+  <td class="cd">Mystics Quarterly主要發表經過同行評審的關於神秘主義和宗教文本的論文，尤其關注但不限於西方中世紀的文本。改版後，期刊將拓展其關注領域，納入歐洲以外中世紀宗教文化的研究。</td>
+</tr>
+<tr class="disc-row" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/CPLI0000518073?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Review+for+Religious" target="_blank" rel="noopener">Review for Religious</a><span class="disc-b">已停刊</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Review for Religious 是一份天主教同行評審期刊，1941年創刊，旨在促進對天主教修道生活及其與上帝、教會和世界關係的研究，服務對象主要是修會會士。【注意：本刊已於2012年停刊，目前並未復刊，過往文章已建置為線上典藏供查閱】。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/CPLI0000518107?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=The+Way" target="_blank" rel="noopener">The Way</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">The Way是由英國耶穌會出版的國際當代基督教靈修期刊。這本期刊以批判性和創造性的學術研究為基礎，旨在為來自不同背景和不同傳統的基督徒提供一個平台，讓他們反思上帝在人類經驗中持續不斷的作為。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/CPLI0000518073?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Review+for+Religious" target="_blank" rel="noopener">Tjurunga: An Australasian Benedictine Review</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Tjurunga: An Australasian Benedictine Review是一本由澳洲和紐西蘭本篤會聯盟自1971年起出版的學術性和靈性期刊。該出版物探討了修道院的實踐、歷史和禮儀，並定期刊登著名修道院學者的文章，例如邁克爾·凱西神父（OCSO）和卡梅爾·波薩博士（SGS）。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.tandfonline.com/loi/wspi20" target="_blank" rel="noopener">Journal of Spirituality in Mental Health</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Journal of Spirituality in Mental Health是一份具影響力的跨學科專業期刊，致力於探討「靈性」與心理治療、諮商及人類幸福感之間的關聯。該期刊為學術界與臨床實務界提供了一個重要平台，旨在探討靈性在心理健康療癒與意義構建中扮演的核心角色。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/SCP?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=pdhjnh&amp;searchTerm=Spirituality+in+Clinical+Practice" target="_blank" rel="noopener">Spirituality in Clinical Practice</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">APA Psy</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Spirituality in Clinical Practice是由美國心理學會 (APA) 出版的同行評審學術期刊，每季發行。這本期刊專注於以靈性為導向的心理治療、心理健康和福祉。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-panel " id="panel-9">
+<div class="panel-head" style="border-left:4px solid #4E4170;padding-left:12px;margin-bottom:12px">
+  <span style="font-size:17px;font-weight:700;color:#4E4170">教會音樂</span>
+  <span style="font-size:12px;color:#888;margin-left:8px">共 17 種期刊，點選列名可展開/收合簡介</span>
+</div>
+<div class="tbl-wrap">
+<table class="jt" data-cat="9">
+<thead><tr>
+  <th class="cn" onclick="sortTable(9,'name',this)">期刊名稱 <span class="si">⇅</span></th>
+  <th class="ct" onclick="sortTable(9,'tier',this)" style="text-align:center">分級 <span class="si">⇅</span></th>
+  <th class="ch" onclick="sortTable(9,'hold',this)">館藏 <span class="si">⇅</span></th>
+  <th class="ce" onclick="sortTable(9,'emb',this)" style="text-align:center">晚X年 <span class="si">⇅</span></th>
+  <th class="cd">簡介</th>
+</tr></thead>
+<tbody><tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://elischolar.library.yale.edu/yjmr/" target="_blank" rel="noopener">Yale Journal of Music &amp; Religion</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t1">T1</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Yale Journal of Music &amp; Religion是一本由耶魯大學神聖音樂學院（ISM）發行、經過同行評審的開放取用學術期刊。該期刊致力於跨學科研究，探討神聖音樂在其儀式、藝術及文化脈絡中的多元樣貌。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003532?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Studia+Liturgica" target="_blank" rel="noopener">Studia Liturgica</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">Studia Liturgica是一份國際性的基督教崇拜學與禮儀研究同行評審學術期刊。創刊於1962年，由著名學術出版商 SAGE 代表 Societas Liturgica 發行，旨在促進全球學界與教牧界在禮儀領域的高水準對話與研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003327?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=The+Hymn" target="_blank" rel="noopener">The Hymn</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">The Hymn（現已更名為Journal of Congregational Song）是由北美聖詩學會（The Hymn Society）發行的同儕審查學術季刊。該期刊專為教會音樂家、神職人員、學者與詩人設計，旨在探討教會聖詩與會眾詩歌，內容涵蓋學術研究、詩歌評論與實務專欄。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003579?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Worship" target="_blank" rel="noopener">Worship</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t2">T2</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Worship是一份同儕審查的國際跨教派期刊，致力於禮儀和禮儀革新的研究。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://npm.org/pastoral-music/" target="_blank" rel="noopener">American Organist</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">American Organist（TAO）雜誌由美國管風琴家協會（AGO）每月出版，是全球發行量最大的管風琴和合唱音樂期刊。它是美國管風琴家協會和美國管風琴製造商協會的官方期刊。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/54674537?queryString=Choral%20Journal&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Choral Journal</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲1年</span></td>
+  <td class="cd">這份全國性月刊刊載學術性和實用性的文章和專欄，以及對新發行的CD唱片、書籍和樂譜的評論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001445412?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Cross+Accent" target="_blank" rel="noopener">Cross Accent</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">ATLAS</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Cross Accent是路德會音樂家協會的會刊，每年出版三期。每期涵蓋學術性和資訊性文章，探討路德教會音樂家在神學、音樂學、聖歌學、社會學、禮儀、歷史和實踐等方面遇到的問題，並設有豐富的書籍、唱片和音樂出版物評論專欄。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0001445412?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Cross+Accent" target="_blank" rel="noopener">The Diapason</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">The Diapason 創刊於1909年，是美國歷史最悠久、仍持續發行的管風琴專業期刊，內容涵蓋管風琴、大鍵琴、鐘琴（carillon）與教會音樂，包括樂器規格介紹、國際演奏會與活動訊息、學術與技術性文章，讀者遍及全球風琴師、造琴師、教授與教會音樂工作者，每年出版12期。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://reformedworship.org/issues" target="_blank" rel="noopener">GIA Quarterly</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">由音樂和禮儀領域中一些最受尊敬的人物撰寫的精彩文章，文章語言涵蓋英語和西班牙語。此外，現在您還可以享受更豐富的主日和節日慶典策劃資源，包括更豐富的西班牙語/雙語音樂，以及更多適合現代樂團演奏的音樂，這得益於WLP新推出的《VOICES》讚美詩集。每一期都邀請禮儀和音樂領域的國家級領袖與讀者展開對話，探討如何慶祝能夠改變社區的教區禮拜。</td>
+</tr>
+<tr class="disc-row" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.tandfonline.com/loi/ultg20" target="_blank" rel="noopener">Journal of Church Music</a><span class="disc-b">已停刊</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Church Music曾是一份專注於教會禮拜合唱與管風琴曲目的著名紙本刊物。該刊物已於 1990 年代停刊，但其精神透過數個現存致力於聖樂、禮拜儀式及福音音樂的學術與專業期刊得以延續。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/1764721?queryString=Sacred%20Music&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Journal of Worship Resources</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Journal of Worship Resources是指幾份頂尖的學術與實務出版品，旨在為教會提供禮儀更新、音樂和講道材料。這些期刊提供從經文日課指南、視覺藝術到神學反思等全方位的內容。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://www.tandfonline.com/loi/ultg20" target="_blank" rel="noopener">Liturgy</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-sub">台神訂閱</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Liturgy是一份季刊，旨在幫助人們學習、預備和舉行基督教禮拜。它為教育工作者、音樂家、牧師、堂區禮儀委員會成員以及教授和神學生提供實用指導和反思。每期《禮儀》都聚焦在不同的主題，由許多懷有信仰的牧師、領袖、學者和作家共同撰寫。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://reformedworship.org/issues" target="_blank" rel="noopener">Organist</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">Organists' Review 是英國管風琴家協會（Incorporated Association of Organists, IAO）發行的官方季刊，自1915年創刊（原名The Quarterly Record），是管風琴世界歷史最悠久的刊物之一，內容涵蓋管風琴演奏、作曲家與演奏家專訪、樂器歷史與建造、樂譜與唱片評論等。【原簡介內容含糊，且資源連結誤植為 Reformed Worship 的網址，已一併修正】</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://npm.org/pastoral-music/" target="_blank" rel="noopener">Pastoral Music</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Pastoral Music是美國牧靈音樂家協會（National Association of Pastoral Musicians，簡稱 NPM）的旗艦雜誌與官方期刊。該雜誌每年出版五期，為羅馬天主教傳統中的神職人員、禮儀專家及教堂音樂家，提供教育性文章、禮儀規劃工具、人物專訪以及曲目評論。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://reformedworship.org/issues" target="_blank" rel="noopener">Reformed Worship</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span> <span class="hb h-oa">OA</span></td>
+  <td class="ce" style="text-align:center"><span class="eb eo">即時更新</span></td>
+  <td class="cd">Reformed Worship是加爾文基督教敬拜學院的一個事工 ，致力於透過分享經過驗證的實踐、深思熟慮的文章、富有想像力的資源和協作學習，將世界各地的敬拜領袖、牧師、音樂家和敬拜團體聯繫起來、裝備他們並激勵他們，所有這些都植根於改革宗/長老會傳統。</td>
+</tr>
+<tr class="" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://globaldigital.on.worldcat.org/search/detail/1764721?queryString=Sacred%20Music&amp;databaseList=638&amp;clusterResults=false&amp;stickyFacetsChecked=true&amp;baseScope=wz%3A75572&amp;groupVariantRecords=true&amp;scope=wz%3A75572&amp;idDetect=true&amp;bookReviews=off" target="_blank" rel="noopener">Sacred Music</a></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-db">GDTL</span></td>
+  <td class="ce" style="text-align:center"><span class="eb ew">延遲15年</span></td>
+  <td class="cd">Sacred Music是由美國天主教聖樂協會（Church Music Association of America）於1965年創刊的官方期刊，也是北美地區連續出版歷史最悠久的音樂期刊。</td>
+</tr>
+<tr class="disc-row" onclick="toggleDesc(this)" style="cursor:pointer">
+  <td class="cn"><a class="jl" href="https://research.ebsco.com/c/aclxbq/search/advanced/publications/ATLA0000003390?autocorrect=y&amp;limiters=nlebk.DL%3AY&amp;selectedDb=lsdarjnh&amp;searchTerm=Journal+of+Ritual+Studies" target="_blank" rel="noopener">The Organ</a><span class="disc-b">已停刊</span></td>
+  <td class="ct" style="text-align:center"><span class="tb t3">T3</span></td>
+  <td class="ch"><span class="hb h-none">未收錄</span></td>
+  <td class="ce" style="text-align:center"><span class="en">—</span></td>
+  <td class="cd">The Organ 創立於 1921 年的英國經典季刊，專注於管風琴的世界，內容涵蓋全球新舊管風琴介紹、管風琴家與作曲家專訪、樂器歷史與構造探討、音樂節賽事，以及豐富的唱片與文獻評論。【注意：據其官網公告，本刊已於2026年3月31日停刊，目前正尋找買家接手，暫停所有訂閱與後續出版。】</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<script>
+function switchTab(idx){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelector('.tab-btn[data-tab="'+idx+'"]').classList.add('active');
+  document.getElementById('panel-'+idx).classList.add('active');
+}
+
+function toggleDesc(tr){
+  tr.classList.toggle('open');
+}
+
+const sortState={};
+function sortTable(catIdx, col, th){
+  const key=catIdx+'-'+col;
+  const asc=sortState[key]===undefined?true:!sortState[key];
+  sortState[key]=asc;
+  const table=document.querySelector('table[data-cat="'+catIdx+'"]');
+  table.querySelectorAll('thead th').forEach(h=>{h.classList.remove('sa');h.querySelector('.si').textContent='⇅';});
+  th.classList.add('sa');
+  th.querySelector('.si').textContent=asc?'↑':'↓';
+  const tbody=table.querySelector('tbody');
+  const rows=[...tbody.querySelectorAll('tr')];
+  const tierVal={'T1':0,'T2':1,'T3':2};
+  rows.sort((a,b)=>{
+    let av,bv;
+    if(col==='name'){av=a.querySelector('.cn').textContent.trim();bv=b.querySelector('.cn').textContent.trim();return asc?av.localeCompare(bv,'zh-TW'):bv.localeCompare(av,'zh-TW');}
+    if(col==='tier'){
+      const at=a.querySelector('.ct .tb');const bt=b.querySelector('.ct .tb');
+      av=at?tierVal[at.textContent.trim()]??9:9;bv=bt?tierVal[bt.textContent.trim()]??9:9;
+      return asc?av-bv:bv-av;
+    }
+    if(col==='hold'){av=a.querySelector('.ch').textContent.trim();bv=b.querySelector('.ch').textContent.trim();return asc?av.localeCompare(bv,'zh-TW'):bv.localeCompare(av,'zh-TW');}
+    if(col==='emb'){
+      const parseEmb=td=>{
+        const t=td.textContent.trim();
+        if(!t||t==='—')return 999;
+        if(t.includes('即時'))return -1;
+        if(t.includes('至'))return 500;
+        const m=t.match(/\d+/);return m?parseInt(m[0]):99;
+      };
+      av=parseEmb(a.querySelector('.ce'));bv=parseEmb(b.querySelector('.ce'));
+      return asc?av-bv:bv-av;
+    }
+    return 0;
+  });
+  rows.forEach(r=>tbody.appendChild(r));
+}
+</script>
+</div>
